@@ -267,14 +267,16 @@ const titleMorph = postTitleMorphName(slug);
   @media (hover: hover) {
     .post-item-card:hover {
       transform: translateY(-0.25rem);
+      /* [蓝调主题] 文章卡片悬停光晕由粉色改为蓝色。 */
       box-shadow:
-        0 1.25rem 2.5rem -1.25rem rgb(233 84 107 / 0.4),
-        0 0.5rem 1.25rem -0.75rem rgb(90 97 105 / 0.22);
+        0 1.25rem 2.5rem -1.25rem hsl(var(--primary) / 0.4),
+        0 0.5rem 1.25rem -0.75rem rgb(60 90 125 / 0.22);
     }
 
     :global(.dark) .post-item-card:hover {
+      /* [蓝调主题] 深色模式卡片光晕改为亮蓝。 */
       box-shadow:
-        0 1.25rem 2.75rem -1.25rem rgb(240 123 145 / 0.32),
+        0 1.25rem 2.75rem -1.25rem hsl(var(--primary) / 0.32),
         0 0.5rem 1.5rem -0.75rem rgb(0 0 0 / 0.5);
     }
 
@@ -284,7 +286,8 @@ const titleMorph = postTitleMorphName(slug);
     }
 
     .post-item-card:hover .post-item-more {
-      box-shadow: 0 0.4rem 1.1rem -0.3rem rgb(233 84 107 / 0.6);
+      /* [蓝调主题] “阅读更多”按钮光晕改为蓝色。 */
+      box-shadow: 0 0.4rem 1.1rem -0.3rem hsl(var(--primary) / 0.6);
     }
   }
 

@@ -6,6 +6,12 @@
 # Modify this file to customize your blog.
 # After changes, rebuild the site: docker compose up -d --build
 # =============================================================================
+# [定制说明] 本站基于 cosZone/astro-koharu（AGPL-3.0）定制：
+#   - 全站蓝色主题（浅色 / 深色）与新 Antiona 品牌资产
+#   - 离开标签页时切换标题
+#   - 删除上游全部示例文章，并清理对应的首页/导航示例配置
+# 上游版权与修改说明见仓库根目录 NOTICE。
+# =============================================================================
 
 # =============================================================================
 # Site Basic Information
@@ -93,23 +99,8 @@ categoryMap:
 #   image: 封面图片路径（相对于 public 目录）
 #   description: 分类描述文字，显示在卡片上
 # -----------------------------------------------------------------------------
-featuredCategories:
-  - link: life # 对应 categoryMap 中 随笔: life
-    label: 随笔
-    image: /img/cover/2.webp
-    description: 生活记录、随想随笔
-  - link: note # 对应 categoryMap 中 笔记: note
-    label: 笔记
-    image: /img/cover/4.webp
-    description: 技术笔记、学习笔记
-  - link: note/front-end # 嵌套分类：笔记/前端
-    label: 前端
-    image: /img/cover/1.webp
-    description: 前端技术相关
-  - link: tools # 对应 categoryMap 中 工具: tools
-    label: 工具
-    image: /img/cover/11.webp
-    description: 工具使用、效率提升
+# [示例清理] 上游示例分类卡片已移除；没有真实分类时保持空数组，首页会隐藏该区块。
+featuredCategories: []
 
 # =============================================================================
 # Featured Series
@@ -128,30 +119,8 @@ featuredCategories:
 #   highlightOnHome: 是否在首页高亮显示最新文章（可选，默认 true，显式设为 false 可禁用）
 #   links: 相关链接配置（可选）
 # -----------------------------------------------------------------------------
-featuredSeries:
-  - slug: weekly # URL 路径: /weekly
-    categoryName: 周刊 # 必须与 categoryMap 中的分类名匹配
-    label: 我的周刊 # 简短名称
-    fullName: 我的技术周刊 # 完整名称
-    description: # 支持多行 Markdown
-      一些项目，技术上的心得
-    cover: /img/weekly_header.webp # 系列页面头图
-    enabled: true # 启用此系列
-    icon: ri:newspaper-line # 导航图标
-    links: # 相关链接（可选）
-      github: https://github.com/your-username/your-repo # (可选) GitHub 仓库
-      rss: /rss.xml # (可选) RSS 订阅链接
-      # chrome: https://chromewebstore.google.com/detail/your-extension-id # (可选) 浏览器插件
-      # docs: https://your-docs-url # (可选) 文档链接
-  # 示例：添加第二个系列（取消注释启用）
-  # - slug: reading # URL 路径: /reading
-  #   categoryName: 书摘
-  #   label: 读书笔记
-  #   fullName: 我的读书笔记
-  #   description: 阅读记录与读后感
-  #   cover: /img/weekly_header.webp # 记得添加，我这里就是个示例
-  #   enabled: true
-  #   icon: ri:book-read-line
+# [示例清理] 上游示例「周刊」系列及其导航入口已删除；添加真实系列时按上方字段填写。
+featuredSeries: []
 
 # =============================================================================
 # Social Links
@@ -538,10 +507,7 @@ navigation:
     icon: ri:home-heart-fill # 图标
   # - name: 书摘
   #   path: /reading
-  - name: 周刊
-    nameKey: nav.weekly
-    path: /weekly
-    icon: ri:newspaper-line
+  # [示例清理] 示例周刊导航已移除，避免指向不存在的 /weekly 页面。
   # Optional explicit Moments position. When omitted, enabled Moments is inserted after Archives.
   # - feature: moments
   #   icon: ri:chat-smile-3-fill

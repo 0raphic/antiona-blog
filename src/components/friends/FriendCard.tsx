@@ -20,16 +20,17 @@ interface CSSCustomProperties extends React.CSSProperties {
   '--card-color'?: string;
 }
 
-const DEFAULT_COLOR = '#ffc0cb';
-// Cute SVG Avatar Data URI (Pink Theme)
+// [蓝调主题] 友链默认卡片色与腮红由粉色改为蓝色。
+const DEFAULT_COLOR = '#7cc4ff';
+// Cute SVG Avatar Data URI (Blue Theme)
 const DEFAULT_AVATAR = `data:image/svg+xml;utf8,${encodeURIComponent(`
 <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100" height="100" fill="#ffc0cb"/>
+  <rect width="100" height="100" fill="#7cc4ff"/>
   <circle cx="30" cy="45" r="6" fill="#fff"/>
   <circle cx="70" cy="45" r="6" fill="#fff"/>
   <path d="M 35 65 Q 50 75 65 65" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <circle cx="20" cy="55" r="6" fill="#ff9eb5" opacity="0.5"/>
-  <circle cx="80" cy="55" r="6" fill="#ff9eb5" opacity="0.5"/>
+  <circle cx="20" cy="55" r="6" fill="#2f7cf6" opacity="0.35"/>
+  <circle cx="80" cy="55" r="6" fill="#2f7cf6" opacity="0.35"/>
 </svg>
 `)}`;
 

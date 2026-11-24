@@ -63,7 +63,13 @@ const portraitHero =
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+<!-- [品牌资产] 原 favicon 链接把 .ico 误标成 svg；现优先 SVG，ICO 作为旧浏览器回退。 -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<!-- [蓝调主题] 让移动端浏览器地址栏也跟随蓝色主题（浅色/深色各一条）。 -->
+<meta name="theme-color" content="#2f7cf6" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0d1726" media="(prefers-color-scheme: dark)" />
 <meta name="generator" content={Astro.generator} />
 {heroImages.length > 0 && <link rel="preload" as="image" type="image/avif" media={portraitHero ? wideHeroMedia : undefined} imagesrcset={heroImages.map(({ width, image }) => `${image.src} ${width}w`).join(', ')} imagesizes="100vw" fetchpriority="high" />}
 {portraitHero && <link rel="preload" as="image" type="image/avif" media={portraitHeroMedia} href={portraitHero.src} imagesrcset={portraitHero.srcSet.attribute} fetchpriority="high" />}

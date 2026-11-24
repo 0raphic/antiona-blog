@@ -130,9 +130,10 @@ html.theme-transition .header-content {
     border: 1px solid hsl(var(--primary) / 0.16);
     border-radius: 9999px;
     background: color-mix(in oklab, var(--gradient-bg-start) 78%, transparent);
+    /* [蓝调主题] 页头胶囊的粉色投影改为主题蓝。 */
     box-shadow:
-      0 0.75rem 2rem -1rem rgb(233 84 107 / 0.3),
-      0 0.25rem 0.75rem -0.5rem rgb(40 20 40 / 0.12);
+      0 0.75rem 2rem -1rem hsl(var(--primary) / 0.3),
+      0 0.25rem 0.75rem -0.5rem rgb(10 30 55 / 0.12);
     opacity: 0;
     scale: 0.96 0.85;
     pointer-events: none;
@@ -192,7 +193,8 @@ html.theme-transition .header-content {
 @media (992px >= width) {
   #site-header.with-background {
     border-bottom-color: transparent;
-    box-shadow: 0 0.5rem 1.5rem -1rem rgb(233 84 107 / 0.4);
+    /* [蓝调主题] 移动端页头阴影由粉色改为蓝色。 */
+    box-shadow: 0 0.5rem 1.5rem -1rem hsl(var(--primary) / 0.4);
   }
 
   #site-header.with-background::before {
@@ -222,9 +224,10 @@ html.theme-transition .header-content {
   border: 1px solid hsl(var(--primary) / 0.16);
   border-radius: 1rem;
   background: color-mix(in oklab, var(--gradient-bg-start) 86%, transparent);
+  /* [蓝调主题] 导航浮层的粉色投影改为主题蓝。 */
   box-shadow:
-    0 0.75rem 2rem -1rem rgb(233 84 107 / 0.3),
-    0 0.25rem 0.75rem -0.5rem rgb(40 20 40 / 0.12);
+    0 0.75rem 2rem -1rem hsl(var(--primary) / 0.3),
+    0 0.25rem 0.75rem -0.5rem rgb(10 30 55 / 0.12);
   backdrop-filter: blur(16px) saturate(1.5);
 }
 

@@ -8,12 +8,15 @@ export const PETAL_VIEWBOX = { width: 20, height: 24 } as const;
 const PETAL_PATH =
   'M10 24C4.6 20.4.4 14 1.3 7.9 2 3.3 5.4.6 8.7 1.3L10 4.1l1.3-2.8c3.3-.7 6.7 2 7.4 6.6.9 6.1-3.3 12.5-8.7 16.1Z';
 
-/** Tip and base colors per variant; the gradient runs from the notched tip to the base. */
+/**
+ * Tip and base colors per variant; the gradient runs from the notched tip to the base.
+ * [蓝调主题] 花瓣由樱花粉改为冰蓝/天蓝渐变，和新的蓝色主题一致。
+ */
 export const PETAL_COLORS: ReadonlyArray<readonly [tip: string, base: string]> = [
-  ['#ffe6ee', '#ff9ebd'],
-  ['#fff3f7', '#ffb8cc'],
-  ['#ffd9e5', '#f7879f'],
-  ['#fff9fb', '#ffc7d6'],
+  ['#eaf6ff', '#7cc4ff'],
+  ['#f5fbff', '#a5d8ff'],
+  ['#d9efff', '#5aa7ff'],
+  ['#ffffff', '#bfe3ff'],
 ];
 
 /**

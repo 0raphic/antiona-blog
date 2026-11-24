@@ -5,25 +5,26 @@
  */
 
 /* === Light mode: override Twikoo's default blue (#409eff) with blog theme color === */
+/* [蓝调主题] 原先写死的樱粉改为跟随全站 primary。 */
 .tk-comments-container .tk-submit .tk-row .tk-btn,
 .tk-comments-container a {
-  color: #e9546b;
+  color: hsl(var(--primary));
 }
 
 .tk-comments-container .tk-submit .tk-row .tk-btn:hover,
 .tk-comments-container a:hover {
-  color: #ed788c;
+  color: color-mix(in oklab, hsl(var(--primary)) 78%, white);
 }
 
 .tk-comments-container .tk-submit .tk-row .tk-btn.tk-send-btn {
-  background-color: #e9546b;
-  border-color: #e9546b;
+  background-color: hsl(var(--primary));
+  border-color: hsl(var(--primary));
   color: #fff;
 }
 
 .tk-comments-container .tk-submit .tk-row .tk-btn.tk-send-btn:hover {
-  background-color: #ed788c;
-  border-color: #ed788c;
+  background-color: color-mix(in oklab, hsl(var(--primary)) 78%, white);
+  border-color: color-mix(in oklab, hsl(var(--primary)) 78%, white);
 }
 
 /* === Dark mode === */
@@ -46,22 +47,23 @@ html.dark .tk-comments-container .tk-icon {
   filter: invert(0.8);
 }
 
+/* [蓝调主题] 深色模式同样复用 primary（深色下自动变亮蓝）。 */
 html.dark .tk-comments-container a {
-  color: #ed788c;
+  color: hsl(var(--primary));
 }
 
 html.dark .tk-comments-container a:hover {
-  color: #f09aab;
+  color: color-mix(in oklab, hsl(var(--primary)) 82%, white);
 }
 
 html.dark .tk-comments-container .tk-submit .tk-row .tk-btn.tk-send-btn {
-  background-color: #ed788c;
-  border-color: #ed788c;
+  background-color: hsl(var(--primary));
+  border-color: hsl(var(--primary));
 }
 
 html.dark .tk-comments-container .tk-submit .tk-row .tk-btn.tk-send-btn:hover {
-  background-color: #f09aab;
-  border-color: #f09aab;
+  background-color: color-mix(in oklab, hsl(var(--primary)) 82%, white);
+  border-color: color-mix(in oklab, hsl(var(--primary)) 82%, white);
 }
 
 html.dark .tk-comments-container .tk-admin-warn {

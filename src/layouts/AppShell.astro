@@ -58,6 +58,8 @@ const { post, siderType, isPostPage, articleTools = true } = Astro.props;
   import { setupPetalBurst } from '@lib/sakura/petal-burst';
   import { setupScrollReveal } from '@lib/scroll-reveal';
   import { setupScrollbarActivity } from '@lib/scrollbar-activity';
+  // [标签页提示] 离开标签页时把标题换成提示语，返回后恢复。
+  import { setupTabTitle } from '@lib/tab-title';
   import { setupTouchPrefetch } from '@lib/touch-prefetch';
   import { openModal, type ImageLightboxData } from '@store/modal';
 
@@ -73,6 +75,8 @@ const { post, siderType, isPostPage, articleTools = true } = Astro.props;
   setupArrivalRender();
   setupScrollReveal();
   setupScrollbarActivity();
+  // [标签页提示] 初始化离开标签页改标题行为。
+  setupTabTitle();
   setupTouchPrefetch();
   if (motionConfig.clickBurst) setupPetalBurst();
 </script>

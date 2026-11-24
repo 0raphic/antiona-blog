@@ -126,10 +126,12 @@
     text-align: center;
     font-family: "Bear Days", sans-serif;
     font-weight: 700;
-    color: #e9546b;
+    /* [蓝调主题] 纯文字 logo 由樱粉改为品牌蓝。 */
+    color: #2f7cf6;
   }
 }
 
 .dark .logo-text {
-  color: #ed788c;
+  /* [蓝调主题] 深色模式使用更亮的天空蓝，保证对比度。 */
+  color: #7cc4ff;
 }

@@ -76,7 +76,8 @@ const startYear = siteConfig?.startYear ?? currentYear;
           </>
         )
       }
-      <SakuraSVG className="mx-1 size-5 animate-spin text-[#FFC0CB] duration-10000" />
+      {/* [蓝调主题] 页脚旋转花瓣由粉色改为主题蓝色。 */}
+      <SakuraSVG className="mx-1 size-5 animate-spin text-[#7cc4ff] duration-10000" />
       <span class="author font-medium opacity-75" itemprop="copyrightHolder">
         {siteConfig.name}
         {siteConfig?.alternate ? `@${siteConfig.alternate}` : ''}

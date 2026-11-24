@@ -54,7 +54,8 @@ const isPostPage = stripLocaleFromPath(Astro.url.pathname).startsWith('/post/');
 
     <ClientRouter />
     <UmamiAnalytics />
-    <LoadingIndicator color="#e9536a" />
+    <!-- [蓝调主题] 顶部加载进度条由樱粉改为品牌蓝。 -->
+    <LoadingIndicator color="#2f7cf6" />
     <Tooltips interactive={false} />
 
     <BootScripts />

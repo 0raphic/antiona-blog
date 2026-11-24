@@ -6,18 +6,20 @@
  */
 :root body {
   /* === 主题色 (Theme Colors) === */
+  /* [蓝调主题] 直接跟随全站 primary，浅色/深色模式自动切换。 */
   /* 主要主题色，用于按钮、链接等交互元素 */
-  --waline-theme-color: #e9546b;
+  --waline-theme-color: hsl(var(--primary));
   /* 激活状态颜色，用于悬停、焦点状态 */
-  --waline-active-color: #ed788c;
+  --waline-active-color: color-mix(in oklab, hsl(var(--primary)) 78%, white);
   --waline-light-grey: hsl(var(--muted-foreground));
 }
 
 /* === 暗色模式 (Dark Mode) === */
 html.dark body {
+  /* [蓝调主题] 深色模式的 primary 已是亮蓝，保持同一来源即可。 */
   /* 主题色 - 暗色模式下使用更亮的颜色以保持对比度 */
-  --waline-theme-color: #ed788c;
-  --waline-active-color: #f09aab;
+  --waline-theme-color: hsl(var(--primary));
+  --waline-active-color: color-mix(in oklab, hsl(var(--primary)) 82%, white);
   --waline-light-grey: hsl(var(--muted-foreground));
 
   --waline-color: #8e8e8e;

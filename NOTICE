@@ -1,0 +1,76 @@
+Antiona 的小站
+Copyright (C) 2026 Antiona
+
+This project is a modified version of astro-koharu.
+
+Original project: astro-koharu
+Original repository: https://github.com/cosZone/astro-koharu
+Original author: cosZone (cosine) and the astro-koharu contributors
+Original project blog: https://blog.cosine.ren/
+Original license: GNU Affero General Public License version 3 (AGPL-3.0)
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License along
+with this program. If not, see <https://www.gnu.org/licenses/>.
+
+==============================================================================
+MODIFICATION NOTICE
+==============================================================================
+
+This fork is maintained by Antiona and was modified in November 2026. The
+following changes were made to the upstream work:
+
+1. Replaced the pink/sakura theme accents with a blue palette in both light and
+   dark modes, including design tokens, gradients, shadows, comment widgets,
+   TOC petals, the 404 illustration, the petal particle colors, the footer
+   spinner and the default friend-card avatar.
+2. Replaced the upstream wordmark and favicon with new "Antiona" brand assets:
+   src/assets/svg/logo.svg, public/favicon.svg, public/favicon.ico,
+   public/apple-touch-icon.png, public/favicon-192.png and public/favicon-512.png.
+3. Added a tab-away title behavior in src/lib/tab-title.ts, wired from
+   src/layouts/AppShell.astro.
+4. Removed all upstream sample blog posts from src/content/blog/ and removed
+   the sample featured categories, sample weekly series and weekly navigation
+   entry from config/site.yaml.
+5. Rewrote README.md and added this NOTICE file. package.json now declares
+   "license": "AGPL-3.0-only".
+6. Custom changes are marked in source comments with the tags [蓝调主题],
+   [品牌资产], [标签页提示], [示例清理] and [开源合规].
+
+The upstream files that were not modified remain under their original
+copyright and license notices.
+
+Corresponding source for this fork:
+https://github.com/0raphic/antiona-blog
+
+==============================================================================
+THIRD-PARTY ASSETS
+==============================================================================
+
+1. Quicksand font
+   The "Antiona" wordmark in src/assets/svg/logo.svg was converted from the
+   Quicksand typeface to SVG outlines.
+   Copyright 2011 The Quicksand Project Authors
+   (https://github.com/andrew-paglinawan/QuicksandFamily), with Reserved Font
+   Name "Quicksand".
+   Licensed under the SIL Open Font License, Version 1.1:
+   https://openfontlicense.org/open-font-license-official-text/
+   The font file itself is not redistributed; only outlined letterforms are
+   embedded in the logo.
+
+2. Hexo Shoka theme
+   The visual language of astro-koharu was inspired by Hexo Shoka:
+   https://github.com/amehime/hexo-theme-shoka
+   The upstream project's own notices apply.
+
+3. Other third-party dependencies
+   See package.json and pnpm-lock.yaml. Each dependency retains its own
+   license; this repository does not relicense third-party packages.

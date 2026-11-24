@@ -145,7 +145,7 @@
   scale: 1.6;
 }
 
-/* Only the row being read is pink; its open parent is set in full ink with a pink number. */
+/* Only the row being read is blue; its open parent is set in full ink with a blue number. */
 .silk-heading-link[aria-current],
 .silk-heading-link:is([aria-current], [data-ancestor]) .toc-number {
   color: hsl(var(--primary));
@@ -271,14 +271,16 @@
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#ffc5d4, #ef7396);
+  /* [蓝调主题] 目录花瓣由粉色改为冰蓝渐变。 */
+  background: linear-gradient(#bfe3ff, #5aa7ff);
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: contain;
 }
 
 .dark .toc-petal > span {
-  background: linear-gradient(#ffe0e9, #f7879f);
+  /* [蓝调主题] 深色模式使用夜光蓝，避免花瓣过白。 */
+  background: linear-gradient(#d9efff, #7cc4ff);
 }
 
 /*

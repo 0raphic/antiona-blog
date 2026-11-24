@@ -213,11 +213,12 @@ export const shadows = {
   // Custom shadows from project
   card: '0 0.625rem 1.875rem rgba(90, 97, 105, 0.12)',
   'card-darker': '0 0.625rem 1.875rem rgba(90, 97, 105, 0.2)',
-  'shoka-button': '0px 0px 16px 0px rgb(233, 84, 105, 0.8)',
+  // [蓝调主题] 按钮辉光由樱粉改为品牌蓝。
+  'shoka-button': '0px 0px 16px 0px rgba(47, 124, 246, 0.8)',
 
-  // Sakura-tinted elevation for floating controls
-  'sakura-sm': '0 6px 16px -8px rgb(233 84 107 / 0.45), 0 2px 6px -3px rgb(40 20 40 / 0.12)',
-  'sakura-md': '0 10px 24px -10px rgb(233 84 107 / 0.55), 0 3px 8px -4px rgb(40 20 40 / 0.14)',
+  // [蓝调主题] 浮动控件投影由 Sakura 粉改为蓝色；token 名保留以兼容调用方。
+  'sakura-sm': '0 6px 16px -8px rgb(47 124 246 / 0.45), 0 2px 6px -3px rgb(10 30 55 / 0.12)',
+  'sakura-md': '0 10px 24px -10px rgb(47 124 246 / 0.55), 0 3px 8px -4px rgb(10 30 55 / 0.14)',
 } as const;
 
 /**
