@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // [Cloudflare 部署] 纯静态 Astro 站点：构建产物 dist 直接作为 Worker 静态资源发布，无需 Worker 脚本。
+  "name": "antiona-blog",
+  // [Cloudflare 部署] 必须与 Cloudflare 控制台中创建的 Worker 名称完全一致，否则 Workers Builds 会拒绝部署。
+  "compatibility_date": "2026-11-24",
+  "assets": {
+    "directory": "./dist",
+    // [Cloudflare 部署] 使用 Astro 生成的 dist/404.html 处理未匹配路径。
+    "not_found_handling": "404-page",
+    // [Cloudflare 部署] 目录页使用带斜杠的规范 URL，与 Astro 的静态输出结构一致。
+    "html_handling": "auto-trailing-slash"
+  }
+}
