@@ -1,0 +1,11 @@
+# [Cloudflare 部署] 带哈希的构建产物可长期缓存，避免重复访问时反复校验图片、字体和脚本。
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# [Cloudflare 部署] 站点图片文件名稳定，缓存 7 天；过期后允许先返回旧图并在后台更新。
+/img/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# [Cloudflare 部署] 字体文件体积较大且很少变化，缓存 30 天。
+/fonts/*
+  Cache-Control: public, max-age=2592000
