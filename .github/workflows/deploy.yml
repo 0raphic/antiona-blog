@@ -1,0 +1,44 @@
+# [Cloudflare 部署] push 到 main 后自动构建，并把 dist/ 发布到 Cloudflare Workers 静态资源（见 wrangler.jsonc）。
+# 需要先在仓库 Settings → Secrets and variables → Actions 中配置两项：
+#   CLOUDFLARE_API_TOKEN  Cloudflare 面板「我的个人资料 → API 令牌」用「编辑 Cloudflare Workers」模板创建
+#   CLOUDFLARE_ACCOUNT_ID Cloudflare 账户 ID（Workers 面板右侧栏可见）
+# 配好后每次 push 都会自动上线；不要同时在 Cloudflare 面板里连接 Git 构建，否则会重复部署。
+name: deploy
+
+on:
+  push:
+    branches: [main]
+  # 手动触发：Actions 页面点 Run workflow，可用于仅重建一次站点。
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# 连续 push 时只保留最新一次部署，避免旧提交覆盖新提交。
+concurrency:
+  group: deploy-main
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # pnpm 版本取自 package.json 的 packageManager 字段（pnpm@10.28.2）。
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.20.0
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm build
+
+      # 直接用固定版本 wrangler 上传，行为与本地 `npx wrangler deploy` 一致。
+      - run: npx --yes wrangler@4.168.0 deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

@@ -101,6 +101,26 @@ pnpm preview   # 本地检查 dist/
 
 构建产物是纯静态文件，可部署到任意静态托管（Cloudflare Pages、Vercel、Netlify、GitHub Pages 或自己的服务器）。若使用站点地图、RSS 与 canonical URL，请先在 `config/site.yaml` 中把 `url` 改成实际域名。
 
+### Cloudflare Workers 自动部署
+
+仓库已包含 [`wrangler.jsonc`](./wrangler.jsonc)（纯静态资源 Worker，无 `main`）和 [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml)，push 到 `main` 即自动构建并发布。
+
+首次使用需要在 GitHub 仓库 **Settings → Secrets and variables → Actions** 添加两个 Secret：
+
+| Secret | 内容 |
+|---|---|
+| `CLOUDFLARE_API_TOKEN` | Cloudflare 面板「我的个人资料 → API 令牌」，用「编辑 Cloudflare Workers」模板创建 |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare 账户 ID，Workers & Pages 面板右侧栏可见 |
+
+配好后 `git push` 就会触发部署，也可以在 Actions 页面手动 Run workflow。
+
+注意：不要在 Cloudflare 面板里同时用 Git 集成构建同一个 Worker，否则两边会互相覆盖。已有 `dist/` 时也可以本地直传：
+
+```bash
+pnpm build
+npx wrangler deploy
+```
+
 ## 目录结构
 
 ```text
