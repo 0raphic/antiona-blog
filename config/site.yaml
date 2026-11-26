@@ -18,7 +18,7 @@
 # =============================================================================
 site:
   title: 安媞莉娅の小站 # 网站名称
-  alternate: Antiona # 网站英文名称 用于页脚、Logo、@ handle 等
+  alternate: Antiona's Blog # 网站英文名称 用于页脚、Logo、@ handle 等
   subtitle:  软软呼呼的小窝ฅ•ﻌ•ฅ # 网站副标题
   name: Antiona # 作者名称 - 请修改为你的名字
   description:  嵌入式 / ACG / ISFJ / 轻度强迫症 # 网站描述
@@ -79,15 +79,15 @@ categoryMap:
   工具: tools
   周刊: weekly
   # Secondary categories (for nested paths)
-  前端: front-end
-  CSS: css
+  # 前端: front-end
+  # CSS: css
   番剧: anime
   嵌入式: mbedded
   # Add more as needed:
   # 书摘: reading
   # 后端: back-end
-  # 算法: algorithm
-  # 项目: project
+  算法: algorithm
+  项目: project
 
 # =============================================================================
 # Featured Categories (Homepage)
@@ -162,9 +162,9 @@ social:
   #   icon: ri:zhihu-fill
   #   color: '#1e88e5'
   music:
-     url: https://music.163.com/#/user/home?id=3919575000
-     icon: ri:netease-cloud-music-line
-     color: '#e60026'
+    url: https://music.163.com/#/user/home?id=3919575000
+    icon: ri:netease-cloud-music-line
+    color: '#e60026'
 
 # =============================================================================
 # Friends Links
