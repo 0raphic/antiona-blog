@@ -21,7 +21,7 @@ site:
   alternate: Antiona's Blog # 网站英文名称 用于页脚、Logo、@ handle 等
   subtitle:  软软呼呼的小窝ฅ•ﻌ•ฅ # 网站副标题
   name: Antiona # 作者名称 - 请修改为你的名字
-  description:  嵌入式 / ACG / ISFJ / 轻度强迫症 # 网站描述
+  description:  嵌入式 / ISFJ / 重度拖延症 / 什么都了解一点 # 网站描述
   avatar: /img/avatar.webp # 网站头像
   showLogo: true # 是否显示图形 Logo；默认显示站点名称，启用后可替换 src/assets/svg/logo.svg
   author: Antiona # 作者名称 - 请修改为你的名字
@@ -251,13 +251,13 @@ friends:
 # 取消下方注释即可启用公告示例：
 # -----------------------------------------------------------------------------
 announcements:
-  # - id: welcome-2026 # 唯一标识符
-  #   title: 2026 年新年快乐! # 公告标题
-  #   content: 新年快乐! 感谢大家一直以来的支持~ # 公告内容
+  # - id: welcome-my-blog # 唯一标识符
+  #   title: 建站快乐! # 公告标题
+  #   content: 大家好! 感谢大家的支持~ # 公告内容
   #   type: success # 类型: info/success/warning/error
   #   priority: 10 # 优先级，数值越大越靠前
   #   color: '#FF6B6B' # (可选) 自定义颜色
-  #   publishDate: '2026-01-01' # 发布日期
+  #   publishDate: '2026-11-26' # 发布日期
   #   startDate: '2025-12-31T00:00:00+08:00' # (可选) 开始显示时间
   #   endDate: '2026-01-15T23:59:59+08:00' # (可选) 结束显示时间
   #   link: # (可选) 相关链接
@@ -768,7 +768,7 @@ christmas:
 #   icon: 导航图标，Iconify 格式（可选，默认：ri:bilibili-fill）
 # -----------------------------------------------------------------------------
 bangumi:
-  userId: cosine
+  userId: 1303334
   # label: 追番
   # icon: ri:bilibili-fill
 

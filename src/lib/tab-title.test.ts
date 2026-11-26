@@ -7,10 +7,10 @@ import { resolveTabTitle } from './tab-title';
 
 describe('resolveTabTitle', () => {
   it('returns the away title while the tab is hidden', () => {
-    assert.equal(resolveTabTitle('文章 · 小站', true, '别走呀'), '别走呀');
+    assert.equal(resolveTabTitle('文章 · 小站', true, '•̩̩̩̩ᯅ•̩̩̩'), '•̩̩̩̩ᯅ•̩̩̩');
   });
 
   it('restores the real page title when the tab is visible', () => {
-    assert.equal(resolveTabTitle('文章 · 小站', false, '别走呀'), '文章 · 小站');
+    assert.equal(resolveTabTitle('文章 · 小站', false, '•̩̩̩̩ᯅ•̩̩̩'), '文章 · 小站');
   });
 });

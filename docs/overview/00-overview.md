@@ -229,11 +229,11 @@ import type { BlogPost } from '@types/blog';  // src/types/blog.ts
 ```typescript
 export const siteConfig = {
   // 基本信息
-  title: '余弦の博客',
-  alternate: 'cosine',
-  subtitle: 'WA 的一声就哭了',
-  name: 'cos',
-  description: 'FE / ACG / 手工 / 深色模式强迫症...',
+  title: '安媞莉娅の小站',
+  alternate: 'antiona',
+  subtitle: '...',
+  name: 'antiona',
+  description: '...',
 
   // 资源
   avatar: '/img/avatar.webp',
@@ -247,7 +247,7 @@ export const siteConfig = {
   featuredSeries: {
     categoryName: '周刊',
     label: 'FE Bits',
-    fullName: 'FE Bits 前端周周谈',
+    fullName: 'FE Bits',
   },
 
   // 社交链接
